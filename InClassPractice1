@@ -1,0 +1,54 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+
+################LOAD PACKAGES###############
+library(tidyverse)
+library(readxl)
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+##################IMPORT DATA FILE#####################
+State_Drug_Utilization_Data_2018 <- read.csv("C:/Users/stone.696/Downloads/State_Drug_Utilization_Data_2018.csv")
+
+
+###################FIRST STEP BEFORE ANY ANALYSIS IS TO GET A GOOD OVERALL UNDERSTANDING OF THE DATA###########
+###################THERE ARE A FEW PRIMARY METHODS#######################
+
+glimpse(State_Drug_Utilization_Data_2018)
+
+str(State_Drug_Utilization_Data_2018)
+
+summary(State_Drug_Utilization_Data_2018)
+
+head(State_Drug_Utilization_Data_2018)
+
+tail(State_Drug_Utilization_Data_2018)
+
+
+
+##############HOW MANY STATES ARE IN THE DATABASE?????################################
+
+StateCount <- unique(State_Drug_Utilization_Data_2018$State)
+
+                                                                
+
+################NOW THAT YOU HAVE SEEN THE STRUCTURE OF THE DATA, THE NUMBER AND TYPE OF "FEATURES" (COLUMNS), AND THE OBSERVATIONS (ROWS)############ 
+####################################YOU CAN DO SOME SIMPLE MANIPULATIONS AND ANALYSIS######################################
+
+
+##############HOW MANY STATES ARE IN THE DATABASE?????################################
+
+StateCount <- unique(State_Drug_Utilization_Data_2018$State)
+
+
+###############################LOOKS LIKE THERE ARE 52 Unique Values Listed for State#################################
+##################################THERE ARE ONLY 50 STATES, WHY ARE 52 VALUES SHOWING? WHICH VALUES AREN't STATES?###################
