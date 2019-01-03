@@ -32,13 +32,6 @@ summary(State_Drug_Utilization_Data_2018)
 head(State_Drug_Utilization_Data_2018)
 
 tail(State_Drug_Utilization_Data_2018)
-
-
-
-##############HOW MANY STATES ARE IN THE DATABASE?????################################
-
-StateCount <- unique(State_Drug_Utilization_Data_2018$State)
-
                                                                 
 
 ################NOW THAT YOU HAVE SEEN THE STRUCTURE OF THE DATA, THE NUMBER AND TYPE OF "FEATURES" (COLUMNS), AND THE OBSERVATIONS (ROWS)############ 
